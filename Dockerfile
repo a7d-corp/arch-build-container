@@ -9,3 +9,4 @@ RUN echo "Defaults         lecture = never" > /etc/sudoers.d/privacy && \
 
 USER notroot
 WORKDIR /home/notroot
+ENTRYPOINT ["/bin/bash"]
