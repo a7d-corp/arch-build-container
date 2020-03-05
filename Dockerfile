@@ -3,7 +3,8 @@ FROM archlinux:latest
 RUN pacman -Syuq --noconfirm --noconfirm git \
         base-devel \
         sudo \
-        namcap && \
+        namcap \
+        go && \
     rm -rf /var/cache/pacman/pkg/*
 
 RUN echo "Defaults         lecture = never" > /etc/sudoers.d/privacy && \
