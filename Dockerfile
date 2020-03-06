@@ -4,7 +4,8 @@ RUN pacman -Syuq --noconfirm --noconfirm git \
         base-devel \
         sudo \
         namcap \
-        go && \
+        go \
+        openssh && \
     rm -rf /var/cache/pacman/pkg/*
 
 RUN echo "Defaults         lecture = never" > /etc/sudoers.d/privacy && \
