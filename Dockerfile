@@ -1,11 +1,13 @@
 FROM archlinux:latest
 
-RUN pacman -Syuq --noconfirm --noconfirm git \
+RUN pacman -Syuq --noconfirm --noconfirm \
+        git \
         base-devel \
         sudo \
         namcap \
         go \
-        openssh && \
+        openssh \
+        jq && \
     rm -rf /var/cache/pacman/pkg/*
 
 RUN echo "Defaults         lecture = never" > /etc/sudoers.d/privacy && \
