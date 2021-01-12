@@ -7,7 +7,8 @@ RUN pacman -Syuq --noconfirm --noconfirm \
         namcap \
         go \
         openssh \
-        jq && \
+        jq \
+	wget && \
     rm -rf /var/cache/pacman/pkg/*
 
 RUN echo "Defaults         lecture = never" > /etc/sudoers.d/privacy && \
